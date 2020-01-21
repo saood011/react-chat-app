@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Button } from "semantic-ui-react";
+import { Form, Button, Icon } from "semantic-ui-react";
 
 class InputContainer extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class InputContainer extends Component {
 
   render() {
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit} className="center">
         <Form.Input
           placeholder="name"
           value={this.state.sender}
@@ -29,8 +29,8 @@ class InputContainer extends Component {
           }}
           required
         />
-        <Button primary type="submit">
-          Send
+        <Button color="olive" type="submit">
+          Send &nbsp; <Icon name="send" />
         </Button>
       </Form>
     );

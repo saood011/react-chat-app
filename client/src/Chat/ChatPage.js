@@ -42,9 +42,9 @@ class ChatPage extends Component {
   render() {
     return (
       <Grid>
-        <Grid.Column width={4} />
+        <Grid.Column computer={4} />
 
-        <Grid.Column width={8} color="purple">
+        <Grid.Column mobile={16} computer={8} className="bg-container">
           <h1 className="text-center">Welcome to the discussion!</h1>
           <Grid.Row className="messages-container">
             {this.state.messages.length > 0 ? (
@@ -58,7 +58,7 @@ class ChatPage extends Component {
           </Grid.Row>
         </Grid.Column>
 
-        <Grid.Column width={4} />
+        <Grid.Column computer={4} />
       </Grid>
     );
   }

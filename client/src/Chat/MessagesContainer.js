@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Comment } from "semantic-ui-react";
+import { Comment, Icon } from "semantic-ui-react";
 import ScrollableFeed from "react-scrollable-feed";
 
 class MessagesContainer extends Component {
@@ -10,8 +10,15 @@ class MessagesContainer extends Component {
           {this.props.messages.map((message, index) => {
             return (
               <Comment key={"c" + index}>
-                <Comment.Author as="b">{message.sender}</Comment.Author>
-                <Comment.Text>{message.content}</Comment.Text>
+                <Comment.Author as="b">
+                  <p className="sender">
+                    {" "}
+                    <Icon name="user circle" /> {message.sender.toUpperCase()}{" "}
+                  </p>
+                </Comment.Author>
+                <Comment.Text>
+                  <p className="content"> {message.content} </p>
+                </Comment.Text>
               </Comment>
             );
           })}
