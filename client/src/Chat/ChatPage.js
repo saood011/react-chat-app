@@ -45,7 +45,9 @@ class ChatPage extends Component {
         <Grid.Column computer={4} />
 
         <Grid.Column mobile={16} computer={8} className="bg-container">
-          <h1 className="text-center">Welcome to the discussion!</h1>
+          <h1 className="text-center">
+            Welcome to the discussion! <br></br>
+          </h1>
           <Grid.Row className="messages-container">
             {this.state.messages.length > 0 ? (
               <MessagesContainer messages={this.state.messages} />

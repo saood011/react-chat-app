@@ -19,7 +19,7 @@
   color: white;
 }
 .content {
-  background-color: #ffb3b3;
+  background-color: rgb(241, 232, 236);
   padding: 10px;
   border-bottom-left-radius: 50px;
   border-top-left-radius: 10px;
@@ -42,11 +42,16 @@
   border-radius: 10px;
 }
 .bg-container {
-  background-color: #990000;
+  background-color: #ec18188d;
 }
 .name-input {
   width: 160px;
 }
 .msg-input {
   width: 100%;
+}
+.App {
+  background-image: url("../bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
