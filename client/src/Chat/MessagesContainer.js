@@ -8,6 +8,7 @@ class MessagesContainer extends Component {
       <ScrollableFeed>
         <Comment.Group>
           {this.props.messages.map((message, index) => {
+            let d = new Date(Date.parse(message.timestamp));
             return (
               <Comment key={"c" + index}>
                 <Comment.Author as="b">
@@ -16,7 +17,12 @@ class MessagesContainer extends Component {
                   </p>
                 </Comment.Author>
                 <Comment.Text>
-                  <p className="content"> {message.content} </p>
+                  <p className="content">
+                    <span>{message.content}</span>
+                    <small className="timestamp">
+                      {d.toDateString() + " " + d.toLocaleTimeString()}
+                    </small>
+                  </p>
                 </Comment.Text>
               </Comment>
             );

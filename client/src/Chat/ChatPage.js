@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Grid } from "semantic-ui-react";
+import { Grid, Container } from "semantic-ui-react";
 import MessagesContainer from "./MessagesContainer";
 import InputContainer from "./InputContainer";
 import "./ChatPage.css";
@@ -41,27 +41,25 @@ class ChatPage extends Component {
 
   render() {
     return (
-      <Grid>
-        <Grid.Column computer={4} />
-
-        <Grid.Column mobile={16} computer={8} className="bg-container">
-          <h1 className="text-center">
-            Welcome to the discussion! <br></br>
-          </h1>
-          <Grid.Row className="messages-container">
-            {this.state.messages.length > 0 ? (
-              <MessagesContainer messages={this.state.messages} />
-            ) : (
-              <div />
-            )}
-          </Grid.Row>
-          <Grid.Row>
-            <InputContainer handleSubmit={this.handleSubmit} />
-          </Grid.Row>
-        </Grid.Column>
-
-        <Grid.Column computer={4} />
-      </Grid>
+      <Container className="mainContainer">
+        <Grid>
+          <Grid.Column mobile={16} className="bg-container">
+            <h1 className="text-center">
+              Welcome to the discussion! <br></br>
+            </h1>
+            <Grid.Row className="messages-container">
+              {this.state.messages.length > 0 ? (
+                <MessagesContainer messages={this.state.messages} />
+              ) : (
+                <div />
+              )}
+            </Grid.Row>
+            <Grid.Row>
+              <InputContainer handleSubmit={this.handleSubmit} />
+            </Grid.Row>
+          </Grid.Column>
+        </Grid>
+      </Container>
     );
   }
 

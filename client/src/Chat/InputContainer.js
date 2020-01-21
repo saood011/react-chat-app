@@ -14,6 +14,8 @@ class InputContainer extends Component {
     return (
       <Form onSubmit={this.handleSubmit} className="center">
         <Form.Input
+          icon="users"
+          iconPosition="left"
           placeholder="Enter your name here"
           value={this.state.sender}
           onChange={e => {
@@ -22,18 +24,22 @@ class InputContainer extends Component {
           required
           className="name-input"
         />
-        <Form.Input
-          placeholder="Type your message here..."
-          value={this.state.content}
-          onChange={e => {
-            this.setState({ content: e.target.value });
-          }}
-          required
-          className="msg-input"
-        />
-        <Button color="olive" type="submit">
-          Send &nbsp; <Icon name="send" />
-        </Button>
+        <div className="msg-btn">
+          <Form.Input
+            icon="chat"
+            iconPosition="left"
+            placeholder="Type your message here..."
+            value={this.state.content}
+            onChange={e => {
+              this.setState({ content: e.target.value });
+            }}
+            required
+            className="msg-input"
+          />
+          <Button color="olive" type="submit" className="btn">
+            <Icon name="send" />
+          </Button>
+        </div>
       </Form>
     );
   }
