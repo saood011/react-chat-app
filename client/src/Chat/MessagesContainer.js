@@ -12,7 +12,6 @@ class MessagesContainer extends Component {
               <Comment key={"c" + index}>
                 <Comment.Author as="b">
                   <p className="sender">
-                    {" "}
                     <Icon name="user circle" /> {message.sender.toUpperCase()}{" "}
                   </p>
                 </Comment.Author>

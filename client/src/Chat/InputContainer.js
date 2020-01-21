@@ -14,20 +14,22 @@ class InputContainer extends Component {
     return (
       <Form onSubmit={this.handleSubmit} className="center">
         <Form.Input
-          placeholder="name"
+          placeholder="Enter your name here"
           value={this.state.sender}
           onChange={e => {
             this.setState({ sender: e.target.value });
           }}
           required
+          className="name-input"
         />
         <Form.Input
-          placeholder="type your message here..."
+          placeholder="Type your message here..."
           value={this.state.content}
           onChange={e => {
             this.setState({ content: e.target.value });
           }}
           required
+          className="msg-input"
         />
         <Button color="olive" type="submit">
           Send &nbsp; <Icon name="send" />

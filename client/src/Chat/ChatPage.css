@@ -14,7 +14,7 @@
   margin: 0px;
 }
 .sender {
-  font-size: medium;
+  font-size: 10px;
   padding-left: 10px;
   color: white;
 }
@@ -32,6 +32,10 @@
   box-shadow: -4px 4px 32px 3px rgba(0, 0, 0, 0.75);
 }
 .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   background: #4d0000;
   padding: 10px;
@@ -39,4 +43,10 @@
 }
 .bg-container {
   background-color: #990000;
+}
+.name-input {
+  width: 160px;
+}
+.msg-input {
+  width: 100%;
 }
