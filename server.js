@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const Message = require("./models/message");
 const socket = require("socket.io");
 const path = require("path");
+const sendMail = require("./sendmail");
 
 const PORT = process.env.PORT || 8080;
 
@@ -56,6 +57,24 @@ app.post("/api/message", (req, res) => {
       console.log(err);
       res.send(err).status(500);
     });
+});
+///sending email.....
+app.post("/email/send", (req, res) => {
+  console.log(req.body);
+
+  console.log("i am email send router");
+  sendMail(req.body.email, req.body.name, req.body.message, function(
+    err,
+    data
+  ) {
+    if (err) {
+      console.log("Internal Error" + err);
+      res.send({ response: false });
+    } else {
+      res.send({ response: true });
+      console.log("Email sent");
+    }
+  });
 });
 
 if (process.env.NODE_ENV === "production") {
