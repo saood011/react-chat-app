@@ -45,7 +45,7 @@ class ChatPage extends Component {
         <Grid>
           <Grid.Column mobile={16} className="bg-container">
             <h1 className="text-center">
-              Welcome to the discussion! <br></br>
+              Welcome to the GlobalChat! <br></br>
             </h1>
 
             <Grid.Row className="messages-container">

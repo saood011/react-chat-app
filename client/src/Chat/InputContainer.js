@@ -34,7 +34,11 @@ class InputContainer extends Component {
             onClick={(emoji, event) =>
               this.setState({ content: this.state.content + emoji.native })
             }
-            style={{ position: "absolute", bottom: "30px", left: "10%" }}
+            style={{
+              position: "absolute",
+              bottom: "30px",
+              left: "2%"
+            }}
           />
         </div>
 

@@ -1,0 +1,5 @@
+.bg-main {
+  background-image: url("./chat2.jpg");
+  background-size: contain;
+  background-position-x: center;
+}

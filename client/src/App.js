@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ChatPage from "./Chat/ChatPage";
+import Login from "./Chat/Login";
 class App extends Component {
   state = {
     pass: "",
@@ -18,15 +19,7 @@ class App extends Component {
         <ChatPage sender={this.state.enteredName} />
       </div>
     ) : (
-      <div>
-        <form className="login-page">
-          Your Name:
-          <input type="text" onChange={this.handleChange} name="enteredName" />
-          Password:
-          <input type="password" onChange={this.handleChange} name="pass" />
-          <button onClick={this.handleClick}>enter</button>
-        </form>
-      </div>
+      <Login handleChange={this.handleChange} handleClick={this.handleClick} />
     );
   }
 }

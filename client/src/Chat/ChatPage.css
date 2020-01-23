@@ -1,5 +1,5 @@
 .messages-container {
-  height: 76vh;
+  height: 79vh;
   margin: 0px;
 }
 .text-center {
@@ -15,10 +15,10 @@
   padding-left: 10px;
   color: white;
 }
-.content {
+.messageContainer-content {
   background-color: rgb(241, 232, 236);
   padding: 10px;
-  padding-bottom: ;
+  padding-bottom: 20px;
   border-bottom-left-radius: 50px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -38,6 +38,7 @@
   background: #4d0000;
   padding: 15px;
   border-radius: 10px;
+  width: 100%;
 }
 .bg-container {
   background-color: #ec181836;
@@ -49,10 +50,11 @@
   margin-right: 5px !important;
 }
 .App {
-  background-image: url("../bg.jpeg");
-  background-size: cover;
+  background-image: url("../Chat/chat2.jpg");
   justify-content: center;
   flex-wrap: nowrap;
+  background-size: contain;
+  background-position-x: center;
 }
 .timestamp {
   font-size: 0.7rem;
