@@ -47,6 +47,7 @@ class ChatPage extends Component {
             <h1 className="text-center">
               Welcome to the discussion! <br></br>
             </h1>
+
             <Grid.Row className="messages-container">
               {this.state.messages.length > 0 ? (
                 <MessagesContainer messages={this.state.messages} />
@@ -63,9 +64,9 @@ class ChatPage extends Component {
     );
   }
 
-  handleSubmit = (sender, content) => {
+  handleSubmit = content => {
     let reqBody = {
-      sender: sender,
+      sender: this.props.sender,
       content: content
     };
 

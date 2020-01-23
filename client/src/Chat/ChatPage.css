@@ -1,5 +1,5 @@
 .messages-container {
-  height: 72vh;
+  height: 76vh;
   margin: 0px;
 }
 .text-center {
@@ -11,7 +11,7 @@
 }
 
 .sender {
-  font-size: 10px;
+  font-size: 12px;
   padding-left: 10px;
   color: white;
 }
@@ -34,18 +34,15 @@
 }
 .center {
   display: flex;
-  align-items: center;
   flex-direction: column;
   background: #4d0000;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
 }
 .bg-container {
   background-color: #ec181836;
 }
-.name-input {
-  width: 190px;
-}
+
 .msg-input {
   width: 100%;
   margin-top: 13px !important;
@@ -75,5 +72,26 @@ span {
   height: 30px;
 }
 .mainContainer {
-  width: 500px !important;
+  width: 600px !important;
+}
+.pick {
+  visibility: hidden;
+}
+
+.emoji-icon {
+  font-size: 20px !important;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+  left: 20px;
+}
+.emoji-icon:hover {
+  color: black !important;
+}
+.btn {
+  margin: 0px !important;
+}
+.login-page {
+  text-align: center;
+  margin-top: 50px;
 }
