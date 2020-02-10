@@ -50,7 +50,10 @@ class ChatPage extends Component {
 
             <Grid.Row className="messages-container">
               {this.state.messages.length > 0 ? (
-                <MessagesContainer messages={this.state.messages} />
+                <MessagesContainer
+                  messages={this.state.messages}
+                  enteredName={this.props.sender}
+                />
               ) : (
                 <div />
               )}

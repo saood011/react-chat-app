@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Comment, Icon } from "semantic-ui-react";
+import { Comment, Icon, Divider } from "semantic-ui-react";
 import ScrollableFeed from "react-scrollable-feed";
 import { animations } from "react-animation";
 
@@ -13,7 +13,15 @@ class MessagesContainer extends Component {
             return (
               <Comment
                 key={"c" + index}
-                style={{ maxWidth: 450, animation: animations.bounceIn }}
+                style={{
+                  maxWidth: "100%",
+                  animation: animations.bounceIn,
+                  textAlign:
+                    this.props.enteredName.toLowerCase() ===
+                    message.sender.toLowerCase()
+                      ? "right"
+                      : "left"
+                }}
               >
                 <Comment.Author as="b">
                   <p className="sender">
@@ -21,9 +29,23 @@ class MessagesContainer extends Component {
                   </p>
                 </Comment.Author>
                 <Comment.Text>
-                  <p className="messageContainer-content">
+                  <p
+                    className={
+                      this.props.enteredName.toLowerCase() ===
+                      message.sender.toLowerCase()
+                        ? "messageContainer-content2"
+                        : "messageContainer-content"
+                    }
+                  >
                     <span>{message.content}</span>
-                    <small className="timestamp">
+                    <small
+                      className={
+                        this.props.enteredName.toLowerCase() ===
+                        message.sender.toLowerCase()
+                          ? "timestamp2"
+                          : "timestamp"
+                      }
+                    >
                       {d.toDateString() + " " + d.toLocaleTimeString()}
                     </small>
                   </p>
